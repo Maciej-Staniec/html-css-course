@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <!-- The doctype lets the browser know, that we use the html language in this file -->
 <!-- All browsers will then know that they should use the HTML5 specification to render this html. -->
-<html>
+<html lang="en">
+  <!-- This is a good example where we use attributes. As you can see attributes can also be used within elements with opening and closing tags. -->
   <head>
     <!-- The head element is for things that aren't visible in the browser -->
     <title>The Basic Language of the Web: HTML</title>
@@ -19,10 +20,13 @@
     <h1>📘 The Code Magazine</h1>
     <!-- Each and every page should have only 1 <h1> heading. It is very important to keep in mind. It doesn't violate any html rules, but it is best practice to have only 1. -->
     <h2>The Basic Language of the Web: HTML</h2>
-    <!-- The rest of heading can be used as many times as we need. -->
+    <!-- All other headings can be used as many times as we want. -->
+    <img src="laura-jones.jpg" alt="Laura Jones" height="50px" width="50px" />
+    <!-- Notice that the img element doesn't have opening and closing tags. So, how do we specify its content? Well, we have to include some attributes within the tag to describe the element's content. The most common attributes of img element is src and alt. The src attribute allows us to specify the path to the image and the alt allows us to specify the text which will show if the image couldn't be loaded on our webpage. -->
     <p>Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027</p>
     <!-- We could use a <b> tag to make text bold, but since HTML5, we use a <strong> tag.
       What is the difference? The <b> tag doesn't have any "semantic" meaning unlike the <strong> tag. the <strong> tag says to the browser that something is a very imprtant element that we want to stand out from the page. -->
+    <img src="post-img.jpg" alt="post image" height="200px" width="500px" />
     <p>
       All modern websites and web applications are built using three
       <em>fundamental</em>
@@ -77,5 +81,20 @@
 
     <p>Hopefully you learned something new here. See you next time!</p>
     <h4>Related posts</h4>
+    <ul>
+      <li>
+        <img src="related-1.jpg" alt="related-1" width="75px" />How to learn web
+        development
+      </li>
+      <li>
+        <img src="related-2.jpg" alt="related-2" width="75px" />The unknown
+        power of CSS
+      </li>
+      <li>
+        <img src="related-3.jpg" alt="related-3" width="75px" />Why javascript
+        is awesome
+      </li>
+    </ul>
+    <p></p>
   </body>
 </html>
