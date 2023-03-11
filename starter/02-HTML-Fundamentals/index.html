@@ -31,27 +31,34 @@
     </header>
     <!-- As h1 and nav elements are at the top of the page, it is important to place them inside the 'header' element. This tells the browser "Hey, these elements are the top part of my page!" -->
     <article>
-      <h2>The Basic Language of the Web: HTML</h2>
-      <!-- All other headings can be used as many times as we want. -->
-      <img src="laura-jones.jpg" alt="Laura Jones" height="50px" width="50px" />
-      <!-- Notice that the img element doesn't have opening and closing tags. So, how do we specify its content? Well, we have to include some attributes within the tag to describe the element's content. The most common attributes of img element is src and alt. The src attribute allows us to specify the path to the image and the alt allows us to specify the text which will show if the image couldn't be loaded on our webpage. -->
-      <p>Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027</p>
-      <!-- We could use a <b> tag to make text bold, but since HTML5, we use a <strong> tag.
+      <header>
+        <h2>The Basic Language of the Web: HTML</h2>
+        <!-- All other headings can be used as many times as we want. -->
+        <img
+          src="laura-jones.jpg"
+          alt="Laura Jones"
+          height="50px"
+          width="50px" />
+        <!-- Notice that the img element doesn't have opening and closing tags. So, how do we specify its content? Well, we have to include some attributes within the tag to describe the element's content. The most common attributes of img element is src and alt. The src attribute allows us to specify the path to the image and the alt allows us to specify the text which will show if the image couldn't be loaded on our webpage. -->
+        <p>Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027</p>
+        <!-- We could use a <b> tag to make text bold, but since HTML5, we use a <strong> tag.
       What is the difference? The <b> tag doesn't have any "semantic" meaning unlike the <strong> tag. the <strong> tag says to the browser that something is a very imprtant element that we want to stand out from the page. -->
+        <img src="post-img.jpg" alt="post image" height="200px" width="500px" />
+      </header>
+
+      <p>
+        All modern websites and web applications are built using three
+        <em>fundamental</em>
+        technologies: HTML, CSS and JavaScript. These are the languages of the
+        web.
+        <!-- The same rule applies to the <i> tag, which makes text italic, but doesn't have 'semantic' meaning. Instead, we use <em> which stands for emphasize. -->
+      </p>
+      <p>
+        In this post, let's focus on HTML. We will learn what HTML is all about,
+        and why you too should learn it.
+      </p>
     </article>
-    <!-- A very popular structuring element for blog post articles (title, picture of the posting person and information on who posted this post article on what day and date) is the 'article' element. -->
-    <img src="post-img.jpg" alt="post image" height="200px" width="500px" />
-    <p>
-      All modern websites and web applications are built using three
-      <em>fundamental</em>
-      technologies: HTML, CSS and JavaScript. These are the languages of the
-      web.
-      <!-- The same rule applies to the <i> tag, which makes text italic, but doesn't have 'semantic' meaning. Instead, we use <em> which stands for emphasize. -->
-    </p>
-    <p>
-      In this post, let's focus on HTML. We will learn what HTML is all about,
-      and why you too should learn it.
-    </p>
+    <!-- 'article' element is a very popular structuring element for separating the content of our website (in this case, a blog post is just one item out of many on our website that doesn't have anything to do with other content, so we want to separate it from the rest items). -->
     <h3>What is HTML?</h3>
     <p>
       HTML stands for <strong>H</strong>yper<strong>T</strong>ext
@@ -118,6 +125,6 @@
         is awesome
       </li>
     </ul>
-    <p></p>
+    <footer>Copyright &copy 2027 by The Code Magazine.</footer>
   </body>
 </html>
