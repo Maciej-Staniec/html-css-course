@@ -3,20 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <title>The Basic Language of the Web: HTML</title>
+    <!-- Internal CSS is a CSS code written inside the html file in the head element. Notice how much space the CSS code takes. It is only one element. Can you imagine styling all html elements in the head element? This will create a mess, and this will make really hard to navigate throughout the file. Therefore, don't use Internal CSS unless it is a small project. If this is a medium/large sized project, use external CSS. What is more, it is always best practice to use external CSS, even in small projects.-->
+    <style>
+      h2 {
+        font-size: 40px;
+        color: #1098ad;
+        font-family: sans-serif;
+      }
+      h2::before {
+        content: "TOP";
+        background-color: #ffe70e;
+        color: #444;
+        font-size: 16px;
+        font-weight: bold;
+      }
+    </style>
   </head>
 
   <body>
-    <!--
-    <h1>The Basic Language of the Web: HTML</h1>
-    <h2>The Basic Language of the Web: HTML</h2>
-    <h3>The Basic Language of the Web: HTML</h3>
-    <h4>The Basic Language of the Web: HTML</h4>
-    <h5>The Basic Language of the Web: HTML</h5>
-    <h6>The Basic Language of the Web: HTML</h6>
-    -->
-
     <header>
-      <h1>📘 The Code Magazine</h1>
+      <!-- Inline CSS is a CSS code written inside the html element. Avoid using inline CSS at all costs. Don't use it in your projects. -->
+      <h1
+        style="
+          color: #1098ad;
+          font-size: 26px;
+          text-transform: uppercase;
+          font-style: italic;
+          font-family: sans-serif;
+        ">
+        📘 The Code Magazine
+      </h1>
 
       <nav>
         <a href="blog.html">Blog</a>
@@ -34,8 +50,7 @@
           src="img/laura-jones.jpg"
           alt="Headshot of Laura Jones"
           height="50"
-          width="50"
-        />
+          width="50" />
 
         <p>Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027</p>
 
@@ -43,8 +58,7 @@
           src="img/post-img.jpg"
           alt="HTML code on a screen"
           width="500"
-          height="200"
-        />
+          height="200" />
       </header>
 
       <p>
@@ -118,8 +132,7 @@
             src="img/related-1.jpg"
             alt="Person programming"
             width="75"
-            width="75"
-          />
+            height="75" />
           <a href="#">How to Learn Web Development</a>
           <p>By Jonas Schmedtmann</p>
         </li>
@@ -133,8 +146,7 @@
             src="img/related-3.jpg"
             alt="JavaScript code on a screen"
             width="75"
-            height="75"
-          />
+            height="75" />
           <a href="#">Why JavaScript is Awesome</a>
           <p>By Matilda</p>
         </li>
