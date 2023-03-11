@@ -5,6 +5,8 @@
   <!-- This is a good example where we use attributes. As you can see attributes can also be used within elements with opening and closing tags. -->
   <head>
     <!-- The head element is for things that aren't visible in the browser -->
+    <meta charset="UTF-8" />
+    <!-- metadata means data about the data. Here we describe the character set. Different languages have different character set. English language has simple characters, therefore we define the UTF-8 character set. The 'charset' is the attribute, and the 'UTF-8' is the value. -->
     <title>The Basic Language of the Web: HTML</title>
   </head>
   <body>
@@ -16,16 +18,28 @@
     <h4>The Basic Language of the Web: HTML</h4>
     <h5>The Basic Language of the Web: HTML</h5>
     <h6>The Basic Language of the Web: HTML</h6> -->
-
-    <h1>📘 The Code Magazine</h1>
-    <!-- Each and every page should have only 1 <h1> heading. It is very important to keep in mind. It doesn't violate any html rules, but it is best practice to have only 1. -->
-    <h2>The Basic Language of the Web: HTML</h2>
-    <!-- All other headings can be used as many times as we want. -->
-    <img src="laura-jones.jpg" alt="Laura Jones" height="50px" width="50px" />
-    <!-- Notice that the img element doesn't have opening and closing tags. So, how do we specify its content? Well, we have to include some attributes within the tag to describe the element's content. The most common attributes of img element is src and alt. The src attribute allows us to specify the path to the image and the alt allows us to specify the text which will show if the image couldn't be loaded on our webpage. -->
-    <p>Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027</p>
-    <!-- We could use a <b> tag to make text bold, but since HTML5, we use a <strong> tag.
+    <header>
+      <h1>📘 The Code Magazine</h1>
+      <!-- Each and every page should have only 1 <h1> heading. It is very important to keep in mind. It doesn't violate any html rules, but it is best practice to have only 1. -->
+      <nav>
+        <a href="blog.html">Blog</a>
+        <a href="#">Challenges</a>
+        <a href="#">Flexbox</a>
+        <a href="#">CSS Grid</a>
+      </nav>
+      <!-- The nav element is used to create a navbar and group links together. It gives a better structer to the page. The elements doesn't do anything, all it does is group anchor elements together. It doesn't make sense now, but when we reach te section, where we build layouts, it will be very important to use all different structuring elements. Think of them as a container. -->
+    </header>
+    <!-- As h1 and nav elements are at the top of the page, it is important to place them inside the 'header' element. This tells the browser "Hey, these elements are the top part of my page!" -->
+    <article>
+      <h2>The Basic Language of the Web: HTML</h2>
+      <!-- All other headings can be used as many times as we want. -->
+      <img src="laura-jones.jpg" alt="Laura Jones" height="50px" width="50px" />
+      <!-- Notice that the img element doesn't have opening and closing tags. So, how do we specify its content? Well, we have to include some attributes within the tag to describe the element's content. The most common attributes of img element is src and alt. The src attribute allows us to specify the path to the image and the alt allows us to specify the text which will show if the image couldn't be loaded on our webpage. -->
+      <p>Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027</p>
+      <!-- We could use a <b> tag to make text bold, but since HTML5, we use a <strong> tag.
       What is the difference? The <b> tag doesn't have any "semantic" meaning unlike the <strong> tag. the <strong> tag says to the browser that something is a very imprtant element that we want to stand out from the page. -->
+    </article>
+    <!-- A very popular structuring element for blog post articles (title, picture of the posting person and information on who posted this post article on what day and date) is the 'article' element. -->
     <img src="post-img.jpg" alt="post image" height="200px" width="500px" />
     <p>
       All modern websites and web applications are built using three
@@ -61,7 +75,16 @@
       <li>The closing tag</li>
       <li>The actual element</li>
     </ol>
-    <p>You can learn more at MDN Web Docs.</p>
+    <p>
+      You can learn more at
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+        target="_blank"
+        >MDN Web Docs.</a
+      >
+      <!-- The 'a' element stands for anchor element. It is equivalent to a hyperlink or URL link. The 'href' attribute allows us to specify the hyperlink value. The 'target' attribute with the '_blank' value allows us to open the hyperlink in a new browser tab.-->
+    </p>
+
     <h3>Why should you learn HTML?</h3>
     <p>
       There are countless reasons for learning the fundamental language of the
