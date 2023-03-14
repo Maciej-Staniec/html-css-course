@@ -1,0 +1,97 @@
+/* Combining CSS selectors into a "list selector" */
+h1,
+h2,
+h3,
+h4,
+p,
+li {
+  font-family: sans-serif;
+  color: #555;
+  /* The colour of h1, h2 and h3 gets overwritten in the next declaration block. In CSS always the last declaration/style is applied. */
+}
+
+h1,
+h2,
+h3 {
+  color: #1098ad;
+}
+
+h1 {
+  /* h1 is a selector */
+  font-size: 26px;
+  /* The 'font' property indicates desired size of the font. The specified size in pixels after the colon character is called a "value". The property-value pair is called declaration/style. */
+  text-transform: uppercase;
+  font-style: italic;
+}
+/* Everything declared between curly braces is also known as "declaration block" */
+/* The entire thing including declaration block and a selector is known as a CSS rule. */
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  font-size: 22px;
+  line-height: 1.5;
+  /* The line-height property tells the browser that we want the height of each line 1.5 times bigger than the font size. */
+}
+
+li {
+  font-size: 20px;
+}
+
+/* Combining selectors into a "descendant selector". */
+/* Notice, there is a space character between selectors. What it actually does is it tells the browser to select all 'p' elements that are inside the 'footer' element. This is why it is called a descendant selector, because the 'p' element is a child of the 'footer' in the html file. */
+footer p {
+  font-size: 16px;
+}
+
+/* ID selectors */
+/* To select id selectors, you need to preced their name using '#' character. */
+/* ID names can only be used once in the html code. That means, that the "author" id can't be reused at any other html element. For grouping together specific elements using the same selector, we use 'class' selectors. */
+/* In a real world we don't use id selectors. They are prone to errors. Imagine our project is getting bigger and bigger over time. We get the point, where we want to reuse a selector, but because we used an id selector, we've got to change it to the 'class' selector in the html file and css stylesheet. Elements can be easily overlooked and probability of syntax error also increases. Therefore, in the production environment always use class selectors not id, even if we use the 'class' selector only once in our html file. This makes our code ready for the future and potential changes.*/
+#author {
+  font-style: italic;
+  font-size: 18px;
+}
+
+/* class selectors */
+/* To select class selectors, they have to be preceded with '.' character. */
+.related-author {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.related-posts {
+  list-style: none;
+}
+
+/* aside ul {
+  list-style: none;
+} */
+
+.main-header,
+aside {
+  background-color: #f5f5f5;
+}
+
+aside {
+  /* The following 'border' property is also known as "shorthand property", because we can specify multiple different properties and their value in a single declaration/style. */
+  /* border: 5px solid #1098ad; */
+
+  /* Because we want to have borders only at the top and bottom of the 'aside' html element, we've got to explicitly specify these properties */
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+}
+
+/*  */

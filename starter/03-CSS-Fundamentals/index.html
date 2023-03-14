@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <title>The Basic Language of the Web: HTML</title>
-    <!-- Internal CSS is a CSS code written inside the html file in the head element. Notice how much space the CSS code takes. It is only one element. Can you imagine styling all html elements in the head element? This will create a mess, and this will make really hard to navigate throughout the file. Therefore, don't use Internal CSS unless it is a small project. If this is a medium/large sized project, use external CSS. What is more, it is always best practice to use external CSS, even in small projects.-->
-    <style>
+
+    <!-- Internal CSS is a CSS code written inside the html file in the head element. Notice how much space the CSS code takes. It is only one element. Can you imagine styling all html elements in the head element? This will create a mess, and make really hard to navigate throughout the file. Therefore, don't use Internal CSS unless it is a small project. If this is a medium/large sized project, use external CSS. Either way, it is always a best practice to use external CSS, even in small projects.-->
+
+    <!-- <style>
       h2 {
         font-size: 40px;
         color: #1098ad;
@@ -17,22 +19,24 @@
         font-size: 16px;
         font-weight: bold;
       }
-    </style>
+    </style> -->
+
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <header>
+    <header class="main-header">
       <!-- Inline CSS is a CSS code written inside the html element. Avoid using inline CSS at all costs. Don't use it in your projects. -->
-      <h1
-        style="
+
+      <!-- <h1
+         style="
           color: #1098ad;
           font-size: 26px;
           text-transform: uppercase;
           font-style: italic;
-          font-family: sans-serif;
-        ">
-        📘 The Code Magazine
-      </h1>
+          font-family: sans-serif;">📘 The Code Magazine </h1> -->
+
+      <h1>📘 The Code Magazine</h1>
 
       <nav>
         <a href="blog.html">Blog</a>
@@ -52,7 +56,9 @@
           height="50"
           width="50" />
 
-        <p>Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027</p>
+        <p id="author">
+          Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027
+        </p>
 
         <img
           src="img/post-img.jpg"
@@ -126,7 +132,7 @@
     <aside>
       <h4>Related posts</h4>
 
-      <ul>
+      <ul class="related-posts">
         <li>
           <img
             src="img/related-1.jpg"
@@ -134,12 +140,12 @@
             width="75"
             height="75" />
           <a href="#">How to Learn Web Development</a>
-          <p>By Jonas Schmedtmann</p>
+          <p class="related-author">By Jonas Schmedtmann</p>
         </li>
         <li>
           <img src="img/related-2.jpg" alt="Lightning" width="75" heigth="75" />
           <a href="#">The Unknown Powers of CSS</a>
-          <p>By Jim Dillon</p>
+          <p class="related-author">By Jim Dillon</p>
         </li>
         <li>
           <img
@@ -148,11 +154,13 @@
             width="75"
             height="75" />
           <a href="#">Why JavaScript is Awesome</a>
-          <p>By Matilda</p>
+          <p class="related-author">By Matilda</p>
         </li>
       </ul>
     </aside>
 
-    <footer>Copyright &copy; 2027 by The Code Magazine.</footer>
+    <footer>
+      <p>Copyright &copy; 2027 by The Code Magazine.</p>
+    </footer>
   </body>
 </html>
