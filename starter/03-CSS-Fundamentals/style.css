@@ -94,4 +94,46 @@ aside {
   border-bottom: 5px solid #1098ad;
 }
 
-/*  */
+/* Pseudo classes */
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  font-style: italic;
+}
+
+li:nth-child(even) {
+  /* color: red; */
+}
+
+/* Pseudo-classes work well only if the selector is first or last child element in the parent element. */
+
+article p:last-child {
+  color: blue;
+}
+
+/* Styling links using pseudo classes */
+a:link {
+  color: red;
+  /* removing underline from hyperlinks */
+  text-decoration: none;
+}
+
+/* Styling visited links with a pseudo class */
+a:visited {
+  color: #1098ad;
+}
+
+/* this pseudo class allows us to style elements and results can be seen when hovering over the element with a mouse cursor*/
+a:hover {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline dotted green;
+}
+
+/* This psuedo class allows us to style elements and the result can be seen when an element gets clicked. */
+a:active {
+  background-color: black;
+  font-style: italic;
+}
