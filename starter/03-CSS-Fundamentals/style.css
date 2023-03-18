@@ -1,5 +1,22 @@
+/* The Universal selector doesn't involve inheritance. */
+* {
+  color: purple;
+  /* If we apply a property within the universal selector's declaration block, it gets applied to all html elements */
+  /* border-bottom: 5px solid blue; */
+}
+
+body {
+  font-family: sans-serif;
+  color: #555;
+
+  /* Only certain properties get inherited by child elements of the body element */
+  /* For example, the border property doesn't get inherited. */
+  border-top: 10px solid #1098ad;
+  /* For the most part, the inheritance involves text-related properties. */
+}
+
 /* Combining CSS selectors into a "list selector" */
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -7,8 +24,8 @@ p,
 li {
   font-family: sans-serif;
   color: #555;
-  /* The colour of h1, h2 and h3 gets overwritten in the next declaration block. In CSS always the last declaration/style is applied. */
-}
+  The colour of h1, h2 and h3 gets overwritten in the next declaration block. In CSS always the last declaration/style is applied.
+} */
 
 h1,
 h2,
@@ -103,9 +120,9 @@ li:last-child {
   font-style: italic;
 }
 
-li:nth-child(even) {
-  /* color: red; */
-}
+/* li:nth-child(even) {
+  color: red;
+} */
 
 /* Pseudo-classes work well only if the selector is first or last child element in the parent element. */
 
@@ -136,4 +153,27 @@ a:hover {
 a:active {
   background-color: black;
   font-style: italic;
+}
+
+/* The red font color is not applied to the element because the pseudo-class selector has higher priority. */
+a {
+  color: red;
+}
+
+/* CSS selectors priority */
+#copyright {
+  color: red;
+}
+
+.text {
+  color: yellow;
+}
+
+.copyright {
+  color: blue;
+}
+
+/* Do not overuse the !important keyword for changing selectors priority. Use it only as a last resort and treat this as a hack. Always try to write simpler selectors. Utilise nested selectors only if necessary.*/
+footer p {
+  color: green !important;
 }
