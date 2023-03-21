@@ -1,8 +1,12 @@
 /* The Universal selector doesn't involve inheritance. */
 * {
-  color: purple;
   /* If we apply a property within the universal selector's declaration block, it gets applied to all html elements */
   /* border-bottom: 5px solid blue; */
+  color: purple;
+
+  /* It is extremely common to zero margin and padding to all elements on the page. Thanks that, it is much easier to style our web page. These declarations have least priority, so any declarations will overwrite them.*/
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -45,6 +49,7 @@ h1 {
 
 h2 {
   font-size: 40px;
+  margin-bottom: 30px;
 }
 
 h3 {
@@ -61,10 +66,44 @@ p {
   font-size: 22px;
   line-height: 1.5;
   /* The line-height property tells the browser that we want the height of each line 1.5 times bigger than the font size. */
+  margin-bottom: 15px;
 }
 
 li {
   font-size: 20px;
+  margin-bottom: 5px;
+}
+
+ul,
+ol {
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+/* Pseudo classes */
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+article {
+  margin-bottom: 60px;
+}
+
+aside {
+  /* The following 'border' property is also known as "shorthand property", because we can specify multiple different properties and their value in a single declaration/style. */
+  /* border: 5px solid #1098ad; */
+
+  /* Because we want to have borders only at the top and bottom of the 'aside' html element, we've got to explicitly specify these properties */
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 500px;
 }
 
 /* Combining selectors into a "descendant selector". */
@@ -101,23 +140,19 @@ footer p {
 aside {
   background-color: #f5f5f5;
 }
-
-aside {
-  /* The following 'border' property is also known as "shorthand property", because we can specify multiple different properties and their value in a single declaration/style. */
-  /* border: 5px solid #1098ad; */
-
-  /* Because we want to have borders only at the top and bottom of the 'aside' html element, we've got to explicitly specify these properties */
-  border-top: 5px solid #1098ad;
-  border-bottom: 5px solid #1098ad;
+.main-header {
+  padding: 20px 40px;
+  /* When it comes to making vertical spaces between HTML elements, it's best to stick to one of the margin properties - either margin-top or margin-bottom. Do not use them interchangeably. */
+  margin-bottom: 60px;
+  /* height: 80px; */
 }
 
-/* Pseudo classes */
-li:first-child {
-  font-weight: bold;
+.post-header {
+  margin-bottom: 40px;
 }
 
-li:last-child {
-  font-style: italic;
+.post-image {
+  /* width: */
 }
 
 /* li:nth-child(even) {
