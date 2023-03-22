@@ -19,6 +19,12 @@ body {
   /* For the most part, the inheritance involves text-related properties. */
 }
 
+.container {
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Combining CSS selectors into a "list selector" */
 /* h1,
 h2,
@@ -158,7 +164,7 @@ aside {
 }
 
 .post-image {
-  width: 800px;
+  width: 600px;
   /* Specifying height is only required if the height has been specified in the html.
   To keep the aspect ratio, we need to set its value to "auto". */
   height: auto;
