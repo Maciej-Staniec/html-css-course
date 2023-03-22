@@ -151,8 +151,17 @@ aside {
   margin-bottom: 40px;
 }
 
+.laura-jones {
+  /* When it comes to using percentges to specify size of the image, it always refers to the width of the parent container. In this case, the parent of the laura jones image is the header html element. What is special about using percentages? Well, depending on the size of the display, the browser window can be different in size. The image will adjust its width and height automatically. This is very important if we want to create responsive webites - websites that adapt to the screen's width. */
+  width: 10%;
+  height: auto;
+}
+
 .post-image {
-  /* width: */
+  width: 800px;
+  /* Specifying height is only required if the height has been specified in the html.
+  To keep the aspect ratio, we need to set its value to "auto". */
+  height: auto;
 }
 
 /* li:nth-child(even) {
