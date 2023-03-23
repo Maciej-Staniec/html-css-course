@@ -20,9 +20,11 @@ body {
 }
 
 .container {
-  width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 800px;
+  /* When you set margin to auto, it means that the browser will figure out the appropriate width. */
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin: 0 auto;
 }
 
 /* Combining CSS selectors into a "list selector" */
@@ -158,13 +160,13 @@ aside {
 }
 
 .laura-jones {
-  /* When it comes to using percentges to specify size of the image, it always refers to the width of the parent container. In this case, the parent of the laura jones image is the header html element. What is special about using percentages? Well, depending on the size of the display, the browser window can be different in size. The image will adjust its width and height automatically. This is very important if we want to create responsive webites - websites that adapt to the screen's width. */
+  /* When it comes to using percentages to specify size of an image, it always refers to the width of the parent container. In this case, the parent of the laura jones image is the header html element. What is special about using percentages? Well, depending on the size of the display, the browser window can be different in size. The image will adjust its width and height automatically. This is very important if we want to create responsive webites - websites that adapt to the screen's width. */
   width: 10%;
   height: auto;
 }
 
 .post-image {
-  width: 600px;
+  width: 100%;
   /* Specifying height is only required if the height has been specified in the html.
   To keep the aspect ratio, we need to set its value to "auto". */
   height: auto;
