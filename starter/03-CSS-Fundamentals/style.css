@@ -80,6 +80,7 @@ p {
 li {
   font-size: 20px;
   margin-bottom: 5px;
+  display: inline;
 }
 
 ul,
@@ -224,6 +225,13 @@ a {
 .copyright {
   color: blue;
 }
+
+/* nav a:link {
+  background-color: orangered;
+  margin: 20px;
+  padding: 20px;
+  display: block;
+} */
 
 /* Do not overuse the !important keyword for changing selectors priority. Use it only as a last resort and treat this as a hack. Always try to write simpler selectors. Utilise nested selectors only if necessary.*/
 footer p {
