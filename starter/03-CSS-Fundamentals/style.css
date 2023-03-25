@@ -17,6 +17,7 @@ body {
   /* For example, the border property doesn't get inherited. */
   border-top: 10px solid #1098ad;
   /* For the most part, the inheritance involves text-related properties. */
+  position: relative;
 }
 
 .container {
@@ -80,7 +81,7 @@ p {
 li {
   font-size: 20px;
   margin-bottom: 5px;
-  display: inline;
+  /* display: inline; */
 }
 
 ul,
@@ -158,6 +159,7 @@ aside {
 
 .post-header {
   margin-bottom: 40px;
+  position: relative;
 }
 
 .laura-jones {
@@ -184,8 +186,10 @@ article p:last-child {
 }
 
 /* Styling links using pseudo classes */
+
+/* Styling unvisited link */
 a:link {
-  color: red;
+  color: yellow;
   /* removing underline from hyperlinks */
   text-decoration: none;
 }
@@ -208,10 +212,10 @@ a:active {
   font-style: italic;
 }
 
-/* The red font color is not applied to the element because the pseudo-class selector has higher priority. */
-a {
+/* The red font color is not applied to the element because the pseudo-class selector a:link has higher priority. */
+/* a {
   color: red;
-}
+} */
 
 /* CSS selectors priority */
 #copyright {
@@ -226,14 +230,39 @@ a {
   color: blue;
 }
 
-/* nav a:link {
+nav a:link {
   background-color: orangered;
-  margin: 20px;
+  color: #1098ad;
+  /* margin: 20px;
   padding: 20px;
-  display: block;
-} */
+  display: block; */
+  margin-right: 30px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+nav a:link:last-child {
+  margin-top: 0;
+  margin-right: 0;
+  display: inline;
+}
 
 /* Do not overuse the !important keyword for changing selectors priority. Use it only as a last resort and treat this as a hack. Always try to write simpler selectors. Utilise nested selectors only if necessary.*/
 footer p {
   color: green !important;
+}
+
+button {
+  font-size: 22px;
+  padding: 20px;
+  cursor: pointer;
+
+  position: absolute;
+  /* the position of the element on the page is by default based on relation to the viewport. We can indicate its position by setting different properties, ie., top, bottom, left, right.
+  To stop our element from positioning based on relation to the the viewport, we need to change the "position" property of the parent's element selector to "relative". Thanks to that, we will be able to position our element anywhere we want within that parent element.
+  
+  Remember! - The element is going to position in relation to its closest parent element which has position property set to relative value. So, if the body element has position property set to relative value and the element with absolute value is inside other parent element which  isn't relatively positioned, the absolutely positioned element will position in relation to the body element. If the parent element would have position property set to relative value, then the absolutely positioned element would position in relation to this parent element, not the body element. The closest parent element always wins.
+   */
+  bottom: 50px;
+  right: 50px;
 }
