@@ -59,6 +59,7 @@ h1 {
 h2 {
   font-size: 40px;
   margin-bottom: 30px;
+  position: relative;
 }
 
 h3 {
@@ -159,7 +160,7 @@ aside {
 
 .post-header {
   margin-bottom: 40px;
-  position: relative;
+  /* position: relative; */
 }
 
 .laura-jones {
@@ -265,4 +266,39 @@ button {
    */
   bottom: 50px;
   right: 50px;
+}
+
+/* Pseudo elements */
+/* Pseudo elements unlike pseudo classes are written with double colon. Pseudo elements allow us to style things that don't exist in the html code. We can style various things in the existing elements. Think of them as subelements.
+Pseudo elements are inline blocks.*/
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+
+h2::first-letter {
+  font-size: 45px;
+}
+
+/* By using adjacent sibling selectors, we can style only elements that are adjacent to indicated preceding elements */
+/* In this case, only first p elements that are situated right after h3 elements will be styled. */
+h3 + p::first-line {
+  color: red;
+}
+
+/* before & after pseudo elements */
+/* All before & after pseudo elements must have declared "content" property, even if they will be empty. */
+/* ::before pseudo element is a very first child of the html element, whereas ::after is a very last child. This means that if we choose ::before, it will create a pseudo element at the very beginning of the selected element, whereas ::after will create af the very end.*/
+h2::before {
+  content: "TOP";
+  background-color: #ffe70e;
+  color: #444444;
+  font-size: 16px;
+  font-weight: bold;
+  /* This is one of the most popular use case of declaring display property to inline-block value */
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  right: -25px;
+  top: -10px;
 }
