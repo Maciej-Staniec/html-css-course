@@ -196,7 +196,6 @@ nav a:link {
   display: block; */
 
   margin-right: 30px;
-  margin-top: 10px;
   display: inline-block;
 }
 
@@ -266,6 +265,7 @@ nav p {
 } */
 
 /* FLOATS */
+/*  
 .author-img {
   float: left;
 }
@@ -286,7 +286,7 @@ nav {
 
 /* .clear {
   clear: both;
-} */
+}
 
 .clearfix::after {
   content: "";
@@ -306,4 +306,53 @@ aside {
 
 footer {
   clear: both;
+}
+*/
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.author-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15;
+}
+
+.author {
+  margin-bottom: 0;
+}
+
+.related-post {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.related-author {
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.related-link {
+  font-size: 17px;
+  font-weight: bold;
+  font-style: normal;
+  margin-bottom: 5px;
+  /* display: block; */
+}
+
+/* nav {
+  display: flex;
+  align-items: center;
+} */
+.row {
+  display: flex;
+  gap: 75px;
 }
