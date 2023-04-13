@@ -355,4 +355,15 @@ footer {
 .row {
   display: flex;
   gap: 75px;
+  align-items: flex-start;
+}
+
+aside {
+  flex-basis: 300px;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+article {
+  margin-bottom: 60px;
 }

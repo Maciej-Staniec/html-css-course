@@ -31,8 +31,10 @@ body {
   text-transform: uppercase;
   font-size: 12px;
   font-weight: bold;
-  margin-top: 8px;
-  margin-bottom: 20px;
+}
+
+.info {
+  margin-bottom: 10px;
 }
 
 .more-info:hover,
@@ -113,6 +115,10 @@ div ul li:last-child {
   background-color: brown;
 }
 
+.description {
+  margin-top: 20px;
+}
+
 .details-list li {
   height: auto;
   width: auto;
@@ -121,39 +127,20 @@ div ul li:last-child {
   margin-bottom: 10px;
 }
 
-.main-img {
-  float: left;
+.container {
+  display: flex;
+  gap: 40px;
 }
 
-.description {
-  float: left;
-  width: 243px;
-  margin-left: 40px;
-  margin-top: 20px;
-}
-
-.price {
-  float: left;
-}
-
-.shipping {
-  float: right;
-}
-
-p {
-  margin-bottom: 10px;
-  display: inline-block;
+.price-shipping {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .details {
-  float: left;
-  width: 243px;
-  margin-left: 40px;
   margin-top: 20px;
-}
-
-.clearfix::after {
-  content: "";
-  display: block;
-  clear: both;
+  flex-basis: 243.5px;
+  flex-shrink: 0;
 }
