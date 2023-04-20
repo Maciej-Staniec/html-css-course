@@ -144,3 +144,17 @@ div ul li:last-child {
   flex-basis: 243.5px;
   flex-shrink: 0;
 }
+
+article {
+  display: grid;
+  grid-template-columns: 250px 1fr 1fr;
+  column-gap: 40px;
+}
+
+.product-title {
+  grid-column: 1/-1;
+}
+
+.add-cart {
+  grid-column: 1/-1;
+}
