@@ -16,7 +16,23 @@ FONT SIZE SYSTEM (px)
 /* GENERAL STYLES */
 /* ------------------------ */
 body {
-  font-family: sans-serif;
+  font-family: "Inter", sans-serif;
+  color: #343a40;
+}
+
+h2 {
+  margin-bottom: 48px;
+  font-size: 36px;
+}
+
+h3 {
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+header,
+section {
+  margin-bottom: 96px;
 }
 
 .container {
@@ -24,13 +40,27 @@ body {
   margin: 0 auto;
 }
 
-header,
-section {
-  margin-bottom: 48px;
+img {
+  width: 100%;
 }
 
-h2 {
-  margin-bottom: 48px;
+.features-title {
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 16px;
+}
+span {
+}
+
+/* ------------------------ */
+/* COMPONENT STYLES */
+/* ------------------------ */
+.header-text-box {
+  align-self: center;
 }
 
 .grid-3-cols {
@@ -38,97 +68,33 @@ h2 {
   grid-template-columns: repeat(3, 1fr);
   column-gap: 80px;
 }
-
-/* ------------------------ */
-/* COMPONENT STYLES */
-/* ------------------------ */
-
-/* HEADER */
-header {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 80px;
-  margin-top: 48px;
-}
-
-.header-text-box {
-  align-self: center;
-}
-
-h1 {
-  margin-bottom: 24px;
-}
-
-.header-text {
-  margin-bottom: 24px;
-}
-
-img {
-  width: 100%;
-}
-
-/* FEATURES */
-.features-icon {
-}
-
-.features-title {
-  margin-bottom: 16px;
-}
-
-.features-text {
-}
-
-/* TESTIMONIAL */
-.testimonial-section {
-}
-
 .testimonial-box {
-  grid-column: 2 / -1;
-  align-self: center;
-}
-
-.testimonial-box h2 {
-  margin-bottom: 24px;
+  grid-column: 2/-1;
 }
 
 .testimonial-text {
   font-style: italic;
   margin-bottom: 24px;
+  font-size: 18px;
 }
 
-/* CHAIRS */
 .chair-box {
-  padding: 24px;
-}
-
-h3 {
-  margin-bottom: 24px;
-}
-
-.chair-details {
-  list-style: none;
-  margin-bottom: 24px;
-}
-
-.chair-details li {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 24px;
-}
-
-.chair-details li:last-child {
-  margin-bottom: 0;
-}
-
-.chair-icon {
+  padding: 32px;
 }
 
 .chair-price {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-footer {
-  margin-bottom: 48px;
+/* HEADER */
+header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 64px;
+  column-gap: 80px;
 }
+/* FEATURES */
+
+/* CHAIRS */
