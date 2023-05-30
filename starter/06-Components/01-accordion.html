@@ -20,7 +20,7 @@
       /*
       COLOURS
       MAIN COLOR: #087f5b
-      GREY COLOR: #343a40
+      GREY COLOR: #374151
       */
 
       * {
@@ -35,11 +35,29 @@
       body {
         font-family: "Inter", sans-serif;
         color: #343a40;
+        line-height: 1;
       }
 
       .accordion {
         width: 700px;
         margin: 100px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .item {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        column-gap: 24px;
+        row-gap: 32px;
+        padding: 24px;
+        box-shadow: 0 0 32px #e5e7eb;
+      }
+
+      .open {
+        border-top: 4px solid #087f5b;
       }
 
       .icon {
@@ -48,6 +66,44 @@
 
       .hidden-box {
         display: none;
+        grid-column: 2;
+      }
+
+      .hidden-box p {
+        line-height: 1.6;
+        margin-bottom: 24px;
+      }
+
+      .hidden-box ul {
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        color: #6b7280;
+      }
+
+      .number,
+      .text {
+        font-size: 24px;
+        font-weight: 500;
+        color: #6b7280;
+      }
+
+      .number {
+        color: #d1d5db;
+      }
+
+      .icon {
+        width: 24px;
+      }
+
+      .open .number,
+      .open .text {
+        color: #087f5b;
+      }
+
+      .open .icon {
+        stroke: #087f5b;
       }
 
       .open .hidden-box {
