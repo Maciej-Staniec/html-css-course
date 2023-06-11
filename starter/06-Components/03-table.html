@@ -16,7 +16,7 @@
 
       /*
       COLOURS
-      MAIN COLOR: #087f5b
+      MAIN COLOR: #065f46
       GREY COLOR: #374151
       */
 
@@ -33,8 +33,63 @@
         font-family: "Inter", sans-serif;
         color: #343a40;
         line-height: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      table {
+        margin-top: 100px;
+        width: 800px;
+        /* border colapse joins adjacent borders into 1 border. */
+        /* border-collapse: collapse; */
+      }
+
+      th,
+      td {
+        /* border: 1px solid grey; */
+        text-align: left;
+        padding: 16px 24px;
       }
     </style>
   </head>
-  <body></body>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Chair</th>
+          <th>The Laid Back</th>
+          <th>The Worker Bee</th>
+          <th>The Chair 4/2</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th>Width</th>
+          <td>80 cm</td>
+          <td>60 cm</td>
+          <td>220 cm</td>
+        </tr>
+        <tr>
+          <th>Height</th>
+          <td>100 cm</td>
+          <td>110 cm</td>
+          <td>90 cm</td>
+        </tr>
+        <tr>
+          <th>Depth</th>
+          <td>70 cm</td>
+          <td>65 cm</td>
+          <td>80 cm</td>
+        </tr>
+        <tr>
+          <th>Weight</th>
+          <td>16 kg</td>
+          <td>22 kg</td>
+          <td>80 kg</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
 </html>
