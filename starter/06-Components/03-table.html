@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Table component</title>
     <style>
       /*
       SPACING SYSTEM (px)
@@ -16,7 +16,7 @@
 
       /*
       COLOURS
-      MAIN COLOR: #065f46
+      MAIN COLOR: #047857
       GREY COLOR: #374151
       */
 
@@ -42,7 +42,8 @@
         margin-top: 100px;
         width: 800px;
         /* border colapse joins adjacent borders into 1 border. */
-        /* border-collapse: collapse; */
+        border-collapse: collapse;
+        font-size: 18px;
       }
 
       th,
@@ -50,6 +51,20 @@
         /* border: 1px solid grey; */
         text-align: left;
         padding: 16px 24px;
+      }
+
+      thead th {
+        background-color: #047857;
+        color: #fff;
+        width: 25%;
+      }
+
+      tbody tr:nth-child(odd) {
+        background-color: #f9fafb;
+      }
+
+      tbody tr:nth-child(even) {
+        background-color: #e5e7eb;
       }
     </style>
   </head>
