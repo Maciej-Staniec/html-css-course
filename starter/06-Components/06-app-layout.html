@@ -7,7 +7,7 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
       rel="stylesheet" />
-    <title></title>
+    <title>App layout</title>
     <style>
       /*
       SPACING SYSTEM (px)
@@ -19,7 +19,7 @@
 
       /*
       COLOURS
-      MAIN COLOR: #047857
+      MAIN COLOR: #7c3aed
       GREY COLOR: #374151
       */
 
@@ -33,11 +33,100 @@
       /* GENERAL STYLES */
       /* ------------------------ */
       body {
-        font-family: "Inter", sans-serif;
+        font-family: sans-serif;
         color: #343a40;
         line-height: 1;
+        font-size: 24px;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 80px 400px 1fr 250px;
+        grid-template-rows: 80px 1fr;
+      }
+
+      nav {
+        background-color: #374151;
+        color: #fff;
+        /* To ensure that the left navigation bar spans space across all rows, use 1 / -1 value. */
+        /* If you ever decide to add a new row, it will still span across all rows. */
+        /* grid-row: span 2 would still work in this case. */
+        grid-row: 1 / -1;
+      }
+
+      menu {
+        background-color: #7c3aed;
+        color: #fff;
+        /* Do the same for grid-column property. Span it across the entire display to the last column. */
+        grid-column: 2/-1;
+      }
+
+      section {
+        background-color: #d1d5db;
+        overflow: scroll;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      main {
+        background-color: #fff;
+      }
+
+      aside {
+        background-color: #d1d5db;
+      }
+
+      /* ------------------------ */
+      /* ELEMENTS */
+      /* ------------------------ */
+
+      button {
+        color: #fff;
+        background-color: #5f3dc4;
+        border: none;
+        box-shadow: none;
+        font-size: 16px;
+        padding: 8px 12px;
+      }
+
+      menu button:last-child {
+        background-color: #d6336c;
+      }
+
+      .email {
+        background-color: #adb5bd;
+        font-size: 24px;
+        height: 96px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     </style>
   </head>
-  <body></body>
+  <body>
+    <nav>Nav</nav>
+    <!-- Menu element is rarely used. We typically use it for building a web application. -->
+    <menu>
+      <button>New</button>
+      <button>Reply</button>
+      <button>Forward</button>
+      <button>Mark Unread</button>
+      <button>Trash</button>
+    </menu>
+    <section>
+      <div class="email">Email 1</div>
+      <div class="email">Email 2</div>
+      <div class="email">Email 3</div>
+      <div class="email">Email 4</div>
+      <div class="email">Email 5</div>
+      <div class="email">Email 6</div>
+      <div class="email">Email 7</div>
+      <div class="email">Email 8</div>
+      <div class="email">Email 9</div>
+      <div class="email">Email 10</div>
+    </section>
+    <main>Email view</main>
+    <aside>Additional info</aside>
+  </body>
 </html>

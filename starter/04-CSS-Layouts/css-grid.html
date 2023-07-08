@@ -56,7 +56,7 @@
         grid-template-rows: 1fr 1fr 1fr 1fr;
         column-gap: 10px;
         row-gap: 30px;
-        display: none;
+        /* display: none; */
       }
 
       .container--2 {
@@ -79,11 +79,17 @@
         /* Aligning grid items inside grid cells */
         align-items: center;
         justify-items: center;
+        display: none;
       }
 
       .el--3 {
-        /* Aligning a specific grid item inside a grid cell using */
+        /* Aligning a specific grid item inside a grid cell
+        WARNING: These will not apply if there is explicitly set width or height of the element
+        ==============================================================
+        */
+        /* Align along Y axis (vertically) */
         align-self: end;
+        /* Align along X axis (horizontally) */
         justify-self: end;
       }
     </style>
