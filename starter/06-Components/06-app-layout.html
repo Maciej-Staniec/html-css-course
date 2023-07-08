@@ -35,6 +35,7 @@
       body {
         font-family: sans-serif;
         font-weight: bold;
+        text-align: center;
         color: #343a40;
         line-height: 1;
         font-size: 24px;
@@ -45,7 +46,7 @@
       }
 
       nav {
-        background-color: #374151;
+        background-color: #343a40;
         color: #fff;
         /* To ensure that the left navigation bar spans space across all rows, use 1 / -1 value. */
         /* If you ever decide to add a new row, it will still span across all rows. */
@@ -54,14 +55,18 @@
       }
 
       menu {
-        background-color: #7c3aed;
+        background-color: #7048e8;
         color: #fff;
         /* Do the same for grid-column property. Span it across the entire display to the last column. */
         grid-column: 2/-1;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 0 40px;
       }
 
       section {
-        background-color: #d1d5db;
+        background-color: #e9ecef;
         overflow: scroll;
         padding: 40px;
         display: flex;
@@ -74,7 +79,7 @@
       }
 
       aside {
-        background-color: #d1d5db;
+        background-color: #e9ecef;
       }
 
       /* ------------------------ */
@@ -89,10 +94,12 @@
         box-shadow: none;
         font-size: 16px;
         padding: 8px 12px;
+        cursor: pointer;
       }
 
       menu button:last-child {
         background-color: #d6336c;
+        margin-left: auto;
       }
 
       .email {
@@ -105,8 +112,11 @@
         justify-content: center;
       }
 
-      
-
+      nav,
+      main,
+      aside {
+        padding-top: 24px;
+      }
     </style>
   </head>
   <body>
