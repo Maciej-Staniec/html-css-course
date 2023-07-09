@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>block vs inline vs inline-block display</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+      a {
+        color: brown;
+        text-decoration: none;
+        border: 2px solid green;
+        height: 100px;
+        width: 100px;
+      }
+      span {
+        color: green;
+        border: 2px solid red;
+        height: 100px;
+        width: 100px;
+      }
+      button {
+        color: white;
+        background-color: orange;
+        border-style: none;
+        /* Changing display of a button element does not work, even if we set it with the !important value */
+        display: inline !important;
+        height: 100px;
+        width: 100px;
+        /* Because we set the inline value as important, the display:block will not affect the style. */
+        display: block;
+      }
+      p {
+        border: 2px solid blue;
+      }
+      h1 {
+        border: 2px solid brown;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This is h1 header</h1>
+    <p>
+      Lorem ipsum dolor sit, <a href="#">Link</a> amet consectetur adipisicing
+      elit. Iusto quibusdam quia consectetur assumenda dolores incidunt commodi
+      facilis pariatur est quam illum nulla sed, maiores possimus voluptas
+      nostrum sapiente ad temporibus!
+    </p>
+    <p>
+      Lorem, ipsum dolor sit amet <span>span</span> consectetur adipisicing
+      elit. Cupiditate voluptates vero doloribus sapiente, qui, alias provident
+      laborum perferendis iure sunt, quisquam minus dolor. Ratione, voluptates
+      molestiae inventore mollitia libero corporis.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut aut dolor
+      possimus quisquam voluptatibus, hic at dolores. Optio illo, laboriosam,
+      eveniet pariatur assumenda <button>Button</button>repellendus placeat quos
+      nihil eum, voluptatem accusamus.
+    </p>
+  </body>
+</html>
